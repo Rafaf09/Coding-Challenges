@@ -31,5 +31,5 @@ def goldbach_weak_conjecture(num):
 	"""Returns a group of 3 primes that sum up to a number."""
 	sieve_ = sorted(sieve(num), reverse=True)
 	sumands = next([i, j] for i in sieve_ for j in sieve_ if i + j < num - 1 and is_prime(num - (i + j)))
-	results = [[num - (sumands[0] + sumands[1]), sumands[0], sumands[1]]]
-	return results[0]
+	results = [num - (sumands[0] + sumands[1]), sumands[0], sumands[1]]
+	return results
